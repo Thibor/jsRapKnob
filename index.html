@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Demo</title>
+<link rel="stylesheet" href="jsRapKnob.css" />
+<link rel="stylesheet" href="index.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="jsRapKnob.js"></script>
+<script>
+function SetPosition(value){
+$('#demo1')[0].SetPosition(value);
+}
+
+$(document).ready(function(){
+
+$('#demo1').jsRapKnob();
+
+$('#demo2').jsRapKnob({
+position:0.6,
+onChange:function(value){
+	$('.rapKnobCaption',this).text('Volume ' + Math.floor(value * 100) + '%');
+},
+onMouseUp:function(value){
+	alert(value);
+}
+});
+
+});
+</script>
+</head>
+<body>
+<div id="divMain">
+<div id="divGitHub">
+<div id="GitHub" onclick="location.href='https://github.com/Thibor/jsRapKnob'"></div>
+</div>
+<div id="demo1" ></div>
+<div id="demo2" ></div>
+</div>
+</body>
+</html>
