@@ -13,11 +13,13 @@ width:80px;
 .rapKnobIn{
 top:50%;
 left:50%;	
-background-color:black;
 position:absolute;
-height:50%;
-width:4%;
 z-index:1;
+height:10%;
+width:10%;	
+border-radius:50%;
+border-color:#000;
+border-style:solid;
 }
 
 .rapKnobCaption{

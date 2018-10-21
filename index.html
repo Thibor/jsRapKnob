@@ -17,6 +17,14 @@ $(document).ready(function(){
 $('#demo1').jsRapKnob();
 
 $('#demo2').jsRapKnob({
+position:0.3,
+steps:5,
+onChange:function(value,step){
+	$('.rapKnobCaption',this).text('Step ' + step);
+}
+});
+
+$('#demo3').jsRapKnob({
 position:0.6,
 onChange:function(value){
 	$('.rapKnobCaption',this).text('Volume ' + Math.floor(value * 100) + '%');
@@ -36,6 +44,7 @@ onMouseUp:function(value){
 </div>
 <div id="demo1" ></div>
 <div id="demo2" ></div>
+<div id="demo3" ></div>
 </div>
 </body>
 </html>
